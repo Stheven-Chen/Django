@@ -1,0 +1,14 @@
+.banner {
+  background-image: url("/static/img/Riceufood.png");
+  background-size: cover;
+  height: 700px;
+}
+
+.banner-content {
+  padding-top: 150px;
+}
+
+.content {
+  height: 800px;
+  margin-top: -30px;
+}

@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% include "snippets/styles.html" %} {% comment %} My Css {% endcomment %} 
+    {% block app_css %}
+      <link rel="stylesheet" href="{% static "css/style2.css" %}">
+    {% endblock app_css %}
+    <title>{{judul}}</title>
+  </head>
+  <body>
+    {% include "snippets/navbar.html" %} {% comment %} jumbotron {% endcomment %}
+    <div class="container-fluid banner">
+      <div class="container banner-content col-lg-6">
+        <div class="text-center">
+        {% block header %}
+        
+        {% endblock header %}
+        </div>
+      </div>
+    </div>
+
+    {% comment %} Akhir jumbotron {% endcomment %} {% comment %} content {% endcomment %}
+    <div class="container-fluid">
+      <div class="container bg-white shadow-lg">
+        {% block content-1 %}
+        
+        {% endblock content-1 %}
+      </div>
+      <div class="container bg-dark text-white shadow-lg">
+        {% block content-2 %}
+        
+        {% endblock content-2 %}
+      </div>
+      </div>
+      </div>
+    </div>
+
+    {% comment %} Akhircontent {% endcomment %} {% include "snippets/scripts.html" %}
+  </body>
+</html>

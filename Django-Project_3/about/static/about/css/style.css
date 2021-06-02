@@ -1,0 +1,35 @@
+.banner {
+    background-image: url("/static/about/img/bannerAbout.png");
+    background-size: cover;
+    height: 500px;
+  }
+  
+  .banner-content {
+    padding-top: 150px;
+  }
+  
+  .content {
+    height: 800px;
+    margin-top: -30px;
+  }
+
+  .heading{
+
+    margin-left: -1100px;
+    margin-top: -125px;
+  }
+
+  .subheading{
+
+    margin-left: -1066px;
+    margin-top: 15px;
+  }
+p{
+ font-size: 18px;
+ font-family: sans-serif;
+  }
+
+
+.paragraf-1{
+    margin-top: -300px;
+}
