@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    {% include "snippets/style.html" %}
+    <!-- CSS -->
+    {% block app-css %}
+    <link rel="stylesheet" href="{% static 'css/style5.css' %}" />
+    {% endblock app-css %}
+    <title>{{judul}}</title>
+  </head>
+  <body>
+    {% include "snippets/navbar.html" %}
+
+    <!-- jumbotron -->
+
+    <div class="container-fluid banner">
+      <div class="container banner-content col-lg-12">
+        <div class="text-center">
+          {% block jumbotron %}
+          <h1 class="fw-normal mb-5">
+            Get work done <span class="fw-bolder">faster</span>
+            <br />
+            and <span class="fw-bolder">better</span> with us
+          </h1>
+          <a href="" class="btn btn-primary tombol">Our Work</a>
+          {% endblock jumbotron %}
+        </div>
+      </div>
+    </div>
+    <!--akhitjumbotron -->
+
+    <!-- container semua -->
+    <dev class="container">
+      <!-- info panel -->
+      {% block content %}
+      <div class="row justify-content-center">
+        <div class="col-10 info-panel">
+          <div class="row">
+            <div class="col-lg">
+              <img src="{% static 'img/employee.png' %}" alt="" class="float-start" />
+              <h4>24 Hours</h4>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="col-lg">
+              <img src="{% static 'img/hires.png' %}" alt="" class="float-start" />
+              <h4>Hi-Res</h4>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="col-lg">
+              <img src="{% static 'img/security.png' %}" alt="" class="float-start" />
+              <h4>Security</h4>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endblock content %}
+      <!-- akhirinfo panel -->
+    </dev>
+    <!--akhit container semua -->
+
+    <div class="conteiner-fluid">
+      <div class="container bg-white shadow-lg">{% block content-1 %} {% endblock content-1 %}</div>
+      <div class="container bg-dark text-white shadow-lg">{% block content-2 %} {% endblock content-2 %}</div>
+    </div>
+
+    {% include "snippets/scripts.html" %}
+  </body>
+</html>

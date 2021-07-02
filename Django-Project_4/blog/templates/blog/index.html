@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% load static %} {% block content-1 %} {% block app-css %}
+<link rel="stylesheet" href="{% static 'blog/css/style.css' %}" />
+{% endblock app-css %} {% block jumbotron %}
+<div class="row jumbotron-content">
+  <h1>{{heading}}</h1>
+  <h2>{{subheading}}</h2>
+</div>
+{% endblock jumbotron %} {% block content %}
+<div class="row"></div>
+{% endblock content %} {% for postingan in post %}
+<div class="row p-3">
+  <h1 class="text-start">{{postingan.judul}}</h1>
+  <p class="text-center">{{postingan.body}}</p>
+</div>
+{% endfor %} {% endblock content-1 %}
